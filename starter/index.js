@@ -1,76 +1,88 @@
 const fs = require("fs");
 const path = require("path");
 const inquirer = require("inquirer");
+const util = require('util');
 const generateMarkdown = require("./utils/generateMarkdown");
 
 // array of questions for user
 const questions = [
-  inquirer
-    .prompt([
       {
         type: "input",
-        question: "question",
+        name: "github",
         message: "What is your GitHub username?",
       },
       {
         type: "input",
-        question: "question",
+        name: "project",
         message: "What is your project's name?",
       },
       {
         type: "input",
-        question: "question",
+        name: "contribute",
         message: "What was your motivation for this project?",
       },
       {
         type: "input",
-        question: "question",
+        name: "description",
         message: "Please write a short description of your project",
+      },
+      {
+        type: "input",
+        name: "installation",
+        message: "Installation for the project",
+      },
+      {
+        type: "input",
+        name: "usage",
+        message: "Usage for this project",
       },
       {
         type: "list",
         message: "What licence should your project have?",
-        name: "licence",
+        name: "license",
         choices: ["MIT", "Apache", "Mozilla"],
       },
       {
         type: "input",
-        question: "question",
+        name: "dependencies",
         message: "What command should be run to install dependencies?",
       },
       {
         type: "input",
-        question: "question",
+        name: "tests",
         message: "What command should be run to run tests?",
       },
       {
         type: "input",
-        question: "question",
+        name: "question",
         message: "What does the user need to know about using the repo?",
       },
       {
         type: "input",
-        question: "question",
+        name: "question",
         message: "What does the user need to know about contributing to the repo?",
       },
-    ])
-    .then((data) => {
-      const filename = `${data.name.toLowerCase().split(" ").join("")}.json`;
+      {
+        type: "input",
+        name: "email",
+        message: "What is your email?",
+      },
+    ]
+// function call to initialize program
+    init()
+    .then((data) => writeFileAsync('generatedREADME.md',
+    generateMarkdown(data)))
+    .then(() => console.log('Successfully wrote'))
+    .catch((err) => console.log(err));
 
-      fs.writeFile(filename, JSON.stringify(data, null, "\t"), (err) =>
-        err ? console.log(err) : console.log("Success!")
-      );
-    }),
-];
 
 // function to write README file
-function writeToFile(fileName, data) {}
+const writeFileAsync = util.promisify(fs.writeFile);
 
 // function to initialize program
-function init() {}
+function init() {
+   return inquirer.prompt(questions)
 
-// function call to initialize program
-init();
+}
 
-// license adge for MIT
-// [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
