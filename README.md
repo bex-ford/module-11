@@ -13,12 +13,38 @@ The application will be invoked by using the following command:
 ```bash
 node index.js
 ```
+I installed inquirer 6.5.0 version prior to starting this project
+```bash
+npm i inquirer@6.5.0
+```
+
+## Table of Contents
+- [User Story](#User-story)
+- [Video Demo](#video-demo)
+- [Terminal](#terminal)
+- [Final result](#final-result)
 
 ## User Story
 
-* As a developer, I want a README generator so that I can quickly create a professional README for a new project
+As a developer, I want a README generator so that I can quickly and easily create a professional README for a new project. This will be a great time saver for future projects and it will also 
 
-Below is a video walk through of the functionality 
+## Video Demo
+Below is a video walk through of the functionality:
 
-[![video](assets/READMEtemplate.mp4)]
+![video](assets/READMEtemplate.mp4)
 
+(https://drive.google.com/file/d/1HsHDSJKiPuAhNB0a73UPpQZodBowI-Le/view)
+
+## Terminal
+
+Below is a screenshot of the terminal. I 
+
+![terminal](assets/terminal.png)
+
+## Final Result
+
+This is the final result that is 
+![final result](assets/finalresult.png)
+
+## GitHub 
+[GitHub](https://github.com/bex-ford/module-11)
