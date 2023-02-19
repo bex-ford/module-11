@@ -19,31 +19,31 @@ npm i inquirer@6.5.0
 ```
 
 ## Table of Contents
-- [User Story](#User-story)
+- [User Story](#user-story)
 - [Video Demo](#video-demo)
 - [Terminal](#terminal)
 - [Final result](#final-result)
 
 ## User Story
 
-As a developer, I want a README generator so that I can quickly and easily create a professional README for a new project. This will be a great time saver for future projects and it will also 
+As a developer, I want a README generator so that I can quickly and easily create a professional README for a new project. This will be a great time saver for future projects and it will also have a layout so it ensures i include all the necessary information about the project. 
 
 ## Video Demo
-Below is a video walk through of the functionality:
+Below is a video walk through demonstrating the functionality of the application.
 
-![video](assets/READMEtemplate.mp4)
+[Video walk through](https://drive.google.com/file/d/1HsHDSJKiPuAhNB0a73UPpQZodBowI-Le/view)
 
-(https://drive.google.com/file/d/1HsHDSJKiPuAhNB0a73UPpQZodBowI-Le/view)
 
 ## Terminal
 
-Below is a screenshot of the terminal. I 
+Below is a screenshot of the terminal. It shows all the questions the user has to input to enable the README file. 
 
 ![terminal](assets/terminal.png)
 
 ## Final Result
 
-This is the final result that is 
+This is the final result that is displayed once all questions have been answered. 
+
 ![final result](assets/finalresult.png)
 
 ## GitHub 
